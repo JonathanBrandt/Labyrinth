@@ -11,22 +11,23 @@ import javax.swing.JFrame;
  *
  * @author Jonathan
  */
-public class Anleitung {
-    JFrame anleitung;
+public class Anleitung{
+    
+    private JFrame anleitungFenster;
     
     
     public Anleitung(){
-        JFrame anleitung = new JFrame();
+        anleitungFenster = new JFrame();
         
         frameInit();
-        anleitung.setVisible(true);
+        anleitungFenster.setVisible(true);
     }
     
     private void frameInit(){
-        anleitung.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        anleitung.setLayout(null);
-        anleitung.setSize(1050, 900);
-        anleitung.setResizable(false);
+        anleitungFenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        anleitungFenster.setLayout(null);
+        anleitungFenster.setSize(1050, 900);
+        anleitungFenster.setResizable(false);
         
     }
 }
