@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Startschirm;
 
-import Levels.Fenster;
 import Anleitung.Anleitung;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -42,7 +36,9 @@ public class Startschirm extends JFrame{
         initScreen();
     }
     
-    
+    /**
+     * alle Objekte auf dem Startschirm werden initialisiert.
+     */
     private void initObjects(){
         startknopf.setText("Start");
         startknopf.setSize(300, 100);
@@ -74,6 +70,10 @@ public class Startschirm extends JFrame{
         startbild.setIcon(new ImageIcon("C:\\Users\\Jonathan\\Documents\\Labyrinth_Projekt\\Startbild.png"));
     }
     
+    /**
+     * legt die Größe etc. vom Fenster fest. 
+     * Alle Objekte werden zu dem Fenster hinzugefügt.
+     */
     private void initScreen(){
         setLayout(null);
         setSize(1050, 600);
@@ -93,19 +93,27 @@ public class Startschirm extends JFrame{
         add(startmenue);
         setVisible(true);
     }
-    
+    /**
+     * Diese Methode fügt ein Panel auf das Fenster und macht es sichtbar.
+     * @param panel Das Panel, welche angezeigt werden soll.
+     */
     public void setStartfensterPanel(JPanel panel){
         add(panel);
         panel.setVisible(true);
     }
-    
-        public void setStartfensterPanelToStartmenue(){
+    /**
+     * Das Einstellungen-Panel wird unsichtbar gemacht und das Startmenü wird sichtbar
+     */
+    public void setStartfensterPanelToStartmenue(){
         einstellungen.setVisible(false);
         add(startmenue);
         startmenue.setVisible(true);
     }
     
-    
+    /**
+     * legt den Titel des Fensters fest
+     * @param titel der Titel welches hinter "Labyrinth - " stehen soll
+     */
     public void setTitel(String titel){
         setTitle("Labyrinth - " + titel);
     }

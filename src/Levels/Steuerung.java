@@ -13,7 +13,7 @@ import static javax.swing.JOptionPane.PLAIN_MESSAGE;
 
 
 /**
- *
+ *Ist für die Steuerung der Figur zuständig. Die Figur wird mit den Tasten W,A,S und D bewegt.
  * @author Jonathan
  */
 public class Steuerung implements KeyListener{
@@ -142,7 +142,11 @@ public class Steuerung implements KeyListener{
 //        
 //        setAktuellePosition(0, 0);
     }
-    
+    /**
+     * Methode wird ausgeführt, wenn man das Spiel gewonnen hat. 
+     * Der KeyListener wird deaktiviert und eine MessageBox popt auf, die einen über der Sieg informiert. 
+     * Das Spielfenster wird geschlossen und der Startschirm wird wieder aufgerufen.
+     */
     private void gewonnen(){
         
         Fenster.getLabels().disableKeyListener();
@@ -150,6 +154,11 @@ public class Steuerung implements KeyListener{
         //Fenster schließen und Startschirm öffnen
     }
     
+    /**
+     * setzt die Position fest, auf der die Figur steht(im Array)
+     * @param x legt die Position auf der X-Achse fest
+     * @param y legt die Position auf der Y-Achse fest
+     */
     public void setAktuellePosition(int x, int y){
         aktuellePosition[0] = x;
         aktuellePosition[1] = y;
@@ -422,7 +431,7 @@ public class Steuerung implements KeyListener{
         }
     }
     
-        /**
+    /**
      * Prüft, welches Feld links der aktuellen Position ist. Ist es Eis, Weg oder das Ziel so wird ein Schritt ausgeführt(Labels und ints werden geändert)
      * Läuft man auf Eis, so rutscht man solange weiter, bis man auf eine Wand trifft
      */
@@ -472,6 +481,10 @@ public class Steuerung implements KeyListener{
         }
     }
     
+    /**
+     * Wenn W,A,S oder D gedrückt wird, wird die zugehörige Laufmethode aufgerufen.
+     * @param e die Taste bzw. Buchstabe der gedrückt wurde
+     */
     @Override
     public void keyTyped(KeyEvent e) {
         if(e.getKeyChar() == 'd'){

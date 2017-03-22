@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- *
+ *Die Klasse legt die einzelnen Labels fest, welche die Felder repräsentieren
  * @author Jonathan
  */
 public class Labels extends JPanel{
