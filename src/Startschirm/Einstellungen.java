@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Startschirm;
 
 import java.awt.Color;
@@ -12,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- *
+ *Ist das Panel auf den Startschirm indem man Einstellungen tätigen kann
  * @author Jonathan
  */
 public class Einstellungen extends JPanel{
@@ -27,6 +22,10 @@ public class Einstellungen extends JPanel{
         
     }
     
+    /**
+     * legt Größe, Farbe und Titel fest. 
+     * Alle Komponenten werden zum Panel hinzugefügt
+     */
     private void initPanel(){
         setSize(1050, 600);
         setLayout(null);
@@ -38,6 +37,10 @@ public class Einstellungen extends JPanel{
         zurueckKnopf.setVisible(true);
     }
     
+    /**
+     * Die Objekte auf dem Panel werden initialisiert. 
+     * D.h. Größe, Ort, Aktion, Text etc. wird festgelegt.
+     */
     private void initComponents(){
         zurueckKnopf = new JButton("< Zurück"); 
         zurueckKnopf.setSize(100, 30);
